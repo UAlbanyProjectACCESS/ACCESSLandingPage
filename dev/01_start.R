@@ -20,7 +20,7 @@
 ##
 golem::fill_desc(
   pkg_name = "ACCESSLandingPage", # The Name of the package containing the App
-  pkg_title = "Project ACCESS Calendly Landing Page.", # The Title of the package containing the App
+  pkg_title = "Project ACCESS Calendly Landing Page", # The Title of the package containing the App
   pkg_description = "This app serves as a Calendly Landing Page for Project ACCESS.", # The Description of the package containing the App
   author_first_name = "Evan", # Your First Name
   author_last_name = "Ozmat", # Your Last Name
@@ -47,7 +47,7 @@ usethis::use_apache_license()
 # usethis::use_news_md(open = FALSE)
 
 ## Use git ----
-# usethis::use_git()
+usethis::use_git()
 usethis::use_github()
 
 ## Init Testing Infrastructure ----
@@ -64,6 +64,9 @@ golem::use_utils_ui(with_test = TRUE)
 golem::use_utils_server(with_test = TRUE)
 
 # You're now set! ----
+
+usethis::use_package("shinyMobile")
+
 
 # go to dev/02_dev.R
 rstudioapi::navigateToFile("dev/02_dev.R")
