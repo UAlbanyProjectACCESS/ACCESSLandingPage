@@ -24,10 +24,13 @@ app_server <- function(input, output, session) {
   observeEvent(input$Navigators, {
       SelectedNavigator<- input$Navigators
       SelectedNavLink<- navlinks[navlinks[,1]==SelectedNavigator,2]
-      print(SelectedNavLink)
 
       if (input$Navigators != "Choose a Navigator"){
-      updateF7Button("NavLink", href=SelectedNavLink)
+        output$LinkButton<-renderUI({
+          tagList(
+          f7Button(label = "View the Navigator's Schedule", href=SelectedNavLink)
+          )
+        })
         }
 
       SelectedNavigator_picture_link<- navlinks[navlinks[,1]==input$Navigators,3]

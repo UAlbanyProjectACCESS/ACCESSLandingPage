@@ -55,11 +55,11 @@ app_ui <- function(request) {
                                "Caroline - (Mon, Tues, Fri)",
                                "Pat  - (Wed, Thurs)",
                                "Shea - (Tues, Fri)"), rotateEffect = T,
-                           openIn = "auto", scrollToInput = F,
+                           openIn = "auto", scrollToInput = F, toolbar = F, toolbarCloseText = NULL,
                            closeByOutsideClick = TRUE, sheetSwipeToClose = F),
 
                   br(),
-                  f7Button("NavLink", "View the Navigator's Schedule", href = NULL),
+                  uiOutput("LinkButton"),
                   footer = NULL,
                   hairlines = F, strong = T, inset = F, tablet = FALSE)),
                 f7Card(
