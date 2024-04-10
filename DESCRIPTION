@@ -1,0 +1,13 @@
+Package: ACCESSLandingPage
+Title: Project ACCESS Calendly Landing Page
+Version: 0.0.1.0000
+Authors@R: person('Evan', 'Ozmat', email = 'eozmat@albany.edu', role = c('cre', 'aut'))
+Description: This app serves as a Calendly Landing Page for Project ACCESS.
+License: Apache License (>= 2)
+Imports: 
+    config (>= 0.3.2),
+    golem (>= 0.4.1),
+    shiny (>= 1.8.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
