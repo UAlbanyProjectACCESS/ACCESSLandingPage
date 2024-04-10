@@ -1,10 +1,8 @@
 Package: ACCESSLandingPage
 Title: Project ACCESS Calendly Landing Page
 Version: 0.0.1.0000
-Authors@R: 
-    person("Evan", "Ozmat", , "eozmat@albany.edu", role = c("cre", "aut"))
-Description: This app serves as a Calendly Landing Page for Project
-    ACCESS.
+Authors@R: person('Evan', 'Ozmat', email = 'eozmat@albany.edu', role = c('cre', 'aut'))
+Description: This app serves as a Calendly Landing Page for Project ACCESS.
 License: Apache License (>= 2)
 URL: https://github.com/EwokOzwok/ACCESSLandingPage
 BugReports: https://github.com/EwokOzwok/ACCESSLandingPage/issues
