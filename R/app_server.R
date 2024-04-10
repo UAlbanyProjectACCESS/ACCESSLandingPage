@@ -31,6 +31,8 @@ app_server <- function(input, output, session) {
           f7Button(label = "View the Navigator's Schedule", href=SelectedNavLink)
           )
         })
+      } else {
+        output$LinkButton<-renderUI({})
         }
 
       SelectedNavigator_picture_link<- navlinks[navlinks[,1]==input$Navigators,3]
