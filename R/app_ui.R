@@ -47,7 +47,10 @@ app_ui <- function(request) {
                   br(),
                   f7Button("NavLink", "View the Navigator's Schedule"),
                   footer = NULL,
-                  hairlines = F, strong = T, inset = F, tablet = FALSE))
+                  hairlines = F, strong = T, inset = F, tablet = FALSE)),
+                f7Card(
+                  uiOutput("NavDescription")
+                )
             )
           )
         )

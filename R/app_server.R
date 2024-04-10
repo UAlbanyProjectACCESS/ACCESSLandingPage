@@ -28,4 +28,21 @@ app_server <- function(input, output, session) {
   }
   })
 
+
+  observeEvent(input$Navigators, {
+  SelectedNavigator_picture_link<- navlinks[navlinks[,1]==input$Navigators,3]
+  Image_link<- paste("<center><img src='",SelectedNavigator_picture_link,"' width=30%></center>")
+
+  SelectedNavigator_info<-navlinks[navlinks[,1]==input$Navigators,4]
+  output$NavDescription<-renderUI({
+    tagList(
+      HTML(Image_link),
+      h4(SelectedNavigator_info)
+    )
+  })
+
+
+  })
+
+
 }
