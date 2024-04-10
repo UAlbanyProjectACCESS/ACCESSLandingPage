@@ -59,7 +59,7 @@ app_ui <- function(request) {
                            closeByOutsideClick = TRUE, sheetSwipeToClose = F),
 
                   br(),
-                  f7Button("NavLink", "View the Navigator's Schedule"),
+                  f7Button("NavLink", "View the Navigator's Schedule", href = NULL),
                   footer = NULL,
                   hairlines = F, strong = T, inset = F, tablet = FALSE)),
                 f7Card(
