@@ -37,7 +37,7 @@ app_server <- function(input, output, session) {
   output$NavDescription<-renderUI({
     tagList(
       HTML(Image_link),
-      h4(SelectedNavigator_info)
+      f7Align(h4(SelectedNavigator_info),side=c("center"))
     )
   })
 
