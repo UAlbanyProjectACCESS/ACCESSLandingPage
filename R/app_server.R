@@ -10,22 +10,11 @@ app_server <- function(input, output, session) {
 
 
 
-
-  observeEvent(input$NavLink, {
-
-
-  if (input$Navigators == "Choose a Navigator"){
-    showNotification("Oops, you forgot to select a Navigator!", duration = 2, closeButton = T)
-  }
-
-  })
-
-
   observeEvent(input$Navigators, {
       SelectedNavigator<- input$Navigators
       SelectedNavLink<- navlinks[navlinks[,1]==SelectedNavigator,2]
-
-      buttontext<- paste("Schedule with ", SelectedNavigator, sep = "")
+      shortname<-navlinks[navlinks[,1]==SelectedNavigator,5]
+      buttontext<- paste("Schedule with ", shortname, sep = "")
 
       if (input$Navigators != "Choose a Navigator"){
         output$LinkButton<-renderUI({
@@ -38,13 +27,13 @@ app_server <- function(input, output, session) {
         }
 
       SelectedNavigator_picture_link<- navlinks[navlinks[,1]==input$Navigators,3]
-      Image_link<- paste("<center><img src='",SelectedNavigator_picture_link,"' width=30%></center>")
+      Image_link<- paste("<center><img src='",SelectedNavigator_picture_link,"' width=20%></center>")
 
       SelectedNavigator_info<-navlinks[navlinks[,1]==input$Navigators,4]
       output$NavDescription<-renderUI({
         tagList(
           HTML(Image_link),
-          f7Align(h4(SelectedNavigator_info),side=c("center"))
+          f7Align(h5(SelectedNavigator_info),side=c("center"))
         )
       })
 
