@@ -30,21 +30,16 @@ app_ui <- function(request) {
             active = TRUE,
             hidden= T,
             f7Block(
+              f7Card(
+                uiOutput("NavDescription"),
+                uiOutput("LinkButton")),
+
               f7Shadow(
                 intensity = 5,
                 hover = TRUE,
                 f7Card(
                   f7Align(h2("Select a Navigator to view their schedule:"), side = c("left")),
-                  # f7Radio("Navigators", NULL, choices = c(
-                  #   "Meg - (Mon,Tues, Thurs)",
-                  #   "Mikhaela - (Mon, Thurs)",
-                  #   "Chioma - (Mon, Wed, Thurs)",
-                  #   "Evan - (Mon, Wed, Fri)",
-                  #   "Clare - (Tues, Wed, Thurs)",
-                  #   "Caroline - (Mon, Tues, Fri)",
-                  #   "Pat  - (Wed, Thurs)",
-                  #   "Shea - (Tues, Fri)"), selected = NULL),
-                  f7Picker("Navigators", label=NULL, placeholder = "Choose a Navigator",
+                  f7SmartSelect("Navigators", label=NULL, placeholder = "Choose a Navigator",
                            choices = c(
                                "Choose a Navigator",
                                "Meg - (Mon,Tues, Thurs)",
@@ -54,17 +49,27 @@ app_ui <- function(request) {
                                "Clare - (Tues, Wed, Thurs)",
                                "Caroline - (Mon, Tues, Fri)",
                                "Pat  - (Wed, Thurs)",
-                               "Shea - (Tues, Fri)"), rotateEffect = T,
-                           openIn = "auto", scrollToInput = F, toolbar = F, toolbarCloseText = NULL,
-                           closeByOutsideClick = TRUE, sheetSwipeToClose = F),
+                               "Shea - (Tues, Fri)"), selected = "Choose a Navigator", openIn = c("sheet"), searchbar = F, virtualList = F),
+
+
+                  # f7Picker("Navigators", label=NULL, placeholder = "Choose a Navigator",
+                  #          choices = c(
+                  #              "Choose a Navigator",
+                  #              "Meg - (Mon,Tues, Thurs)",
+                  #              "Mikhaela - (Mon, Thurs)",
+                  #              "Chioma - (Mon, Wed, Thurs)",
+                  #              "Evan - (Mon, Wed, Fri)",
+                  #              "Clare - (Tues, Wed, Thurs)",
+                  #              "Caroline - (Mon, Tues, Fri)",
+                  #              "Pat  - (Wed, Thurs)",
+                  #              "Shea - (Tues, Fri)"), rotateEffect = T,
+                  #          openIn = "auto", scrollToInput = T, toolbar = F, toolbarCloseText = NULL,
+                  #          closeByOutsideClick = TRUE, sheetSwipeToClose = F),
 
                   br(),
-                  uiOutput("LinkButton"),
                   footer = NULL,
-                  hairlines = F, strong = T, inset = F, tablet = FALSE)),
-                f7Card(
-                  uiOutput("NavDescription")
-                )
+                  hairlines = F, strong = T, inset = F, tablet = FALSE))
+
             )
           )
         )
