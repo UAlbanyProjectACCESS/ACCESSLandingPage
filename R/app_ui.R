@@ -41,15 +41,14 @@ app_ui <- function(request) {
                   f7Align(h2("Select a Navigator to view their schedule:"), side = c("left")),
                   f7SmartSelect("Navigators", label=NULL, placeholder = "Choose a Navigator",
                            choices = c(
-                               "Choose a Navigator",
-                               "Meg - (Mon,Tues, Thurs)",
-                               "Mikhaela - (Mon, Thurs)",
-                               "Chioma - (Mon, Wed, Thurs)",
-                               "Evan - (Mon, Wed, Fri)",
-                               "Clare - (Tues, Wed, Thurs)",
-                               "Caroline - (Mon, Tues, Fri)",
-                               "Pat  - (Wed, Thurs)",
-                               "Shea - (Tues, Fri)"), selected = "Choose a Navigator", openIn = c("sheet"), searchbar = F, virtualList = F),
+                             "Choose a Navigator",
+                             "Meg - (Mon,Wed, Thurs)",
+                             "Mikhaela - (Mon, Thurs)",
+                             "Chioma - (M-F)",
+                             "Evan - (Mon, Wed, Thurs, Fri)",
+                             "Clare - (Tues, Thurs)",
+                             "Shea - (Tues, Thurs)"),
+                           selected = "Choose a Navigator", openIn = c("sheet"), searchbar = F, virtualList = F),
 
 
                   # f7Picker("Navigators", label=NULL, placeholder = "Choose a Navigator",
