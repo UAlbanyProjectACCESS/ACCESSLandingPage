@@ -30,10 +30,14 @@ app_server <- function(input, output, session) {
       Image_link<- paste("<center><img src='",SelectedNavigator_picture_link,"' width=20%></center>")
 
       SelectedNavigator_info<-navlinks[navlinks[,1]==input$Navigators,4]
+      Virtual_info<-navlinks[navlinks[,1]==input$Navigators,6]
       output$NavDescription<-renderUI({
         tagList(
           HTML(Image_link),
-          f7Align(h5(SelectedNavigator_info),side=c("center"))
+          f7Align(h5(SelectedNavigator_info),side=c("center")),
+          br(),
+          f7Align(h5(Virtual_info),side=c("center"))
+
         )
       })
 
