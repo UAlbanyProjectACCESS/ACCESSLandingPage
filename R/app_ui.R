@@ -44,10 +44,10 @@ app_ui <- function(request) {
                              "Choose a Navigator",
                              "Evan - (Mon, Wed, Thurs, Fri)",
                              "Chioma - (M-F)",
-                             "Shea - (Tues, Thurs)"),
+                             "Shea - (Tues, Thurs)",
                              "Clare - (Tues, Thurs)",
                              "Meg - (Mon,Wed, Thurs)",
-                             "Mikhaela - (Mon, Thurs)",
+                             "Mikhaela - (Mon, Thurs)"),
                            selected = "Choose a Navigator", openIn = c("sheet"), searchbar = F, virtualList = F),
 
 

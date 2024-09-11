@@ -16,7 +16,7 @@ app_server <- function(input, output, session) {
       shortname<-navlinks[navlinks[,1]==SelectedNavigator,5]
       buttontext<- paste("Schedule with ", shortname, sep = "")
 
-      if (input$Navigators != "Choose a Navigator"){
+      if(input$Navigators != "Choose a Navigator"){
         output$LinkButton<-renderUI({
           tagList(
           f7Button(label = buttontext, href=SelectedNavLink)
