@@ -42,12 +42,12 @@ app_ui <- function(request) {
                   f7SmartSelect("Navigators", label=NULL, placeholder = "Choose a Navigator",
                            choices = c(
                              "Choose a Navigator",
+                             "Evan - (Mon, Wed, Thurs, Fri)",
+                             "Chioma - (M-F)",
+                             "Shea - (Tues, Thurs)"),
+                             "Clare - (Tues, Thurs)",
                              "Meg - (Mon,Wed, Thurs)",
                              "Mikhaela - (Mon, Thurs)",
-                             "Chioma - (M-F)",
-                             "Evan - (Mon, Wed, Thurs, Fri)",
-                             "Clare - (Tues, Thurs)",
-                             "Shea - (Tues, Thurs)"),
                            selected = "Choose a Navigator", openIn = c("sheet"), searchbar = F, virtualList = F),
 
 
