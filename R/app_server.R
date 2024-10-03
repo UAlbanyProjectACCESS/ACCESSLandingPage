@@ -10,10 +10,11 @@ app_server <- function(input, output, session) {
 
 
 
+
   observeEvent(input$Navigators, {
       SelectedNavigator<- input$Navigators
-      SelectedNavLink<- navlinks[navlinks[,1]==SelectedNavigator,2]
-      shortname<-navlinks[navlinks[,1]==SelectedNavigator,5]
+      SelectedNavLink<- NEW_navlinks[NEW_navlinks[,1]==SelectedNavigator,2]
+      shortname<-NEW_navlinks[NEW_navlinks[,1]==SelectedNavigator,5]
       buttontext<- paste("Schedule with ", shortname, sep = "")
 
       if(input$Navigators != "Choose a Navigator"){
@@ -26,11 +27,11 @@ app_server <- function(input, output, session) {
         output$LinkButton<-renderUI({})
         }
 
-      SelectedNavigator_picture_link<- navlinks[navlinks[,1]==input$Navigators,3]
+      SelectedNavigator_picture_link<- NEW_navlinks[NEW_navlinks[,1]==input$Navigators,3]
       Image_link<- paste("<center><img src='",SelectedNavigator_picture_link,"' width=20%></center>")
 
-      SelectedNavigator_info<-navlinks[navlinks[,1]==input$Navigators,4]
-      Virtual_info<-navlinks[navlinks[,1]==input$Navigators,6]
+      SelectedNavigator_info<-NEW_navlinks[NEW_navlinks[,1]==input$Navigators,4]
+      Virtual_info<-NEW_navlinks[NEW_navlinks[,1]==input$Navigators,6]
       output$NavDescription<-renderUI({
         tagList(
           HTML(Image_link),
