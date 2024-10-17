@@ -51,10 +51,12 @@ app_ui <- function(request) {
                            choices = c(
                              "Choose a Navigator",
                              #"Evan - (Mon, Wed, Thurs, Fri)",
+                             "Julia - (Mon, Tues, Thurs)",
+                             "Mel - (Mon, Tues, Thurs)",
                              "Chioma - (M-F)",
+                             "Meg - (Mon,Wed, Thurs)",
                              "Shea - (Tues, Thurs)",
                              "Clare - (Tues, Thurs)",
-                             "Meg - (Mon,Wed, Thurs)",
                              "Mikhaela - (Mon, Wed)"),
                            selected = "Choose a Navigator", openIn = c("sheet"), searchbar = F, virtualList = F),
 
