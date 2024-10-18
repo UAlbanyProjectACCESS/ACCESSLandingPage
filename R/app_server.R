@@ -10,7 +10,6 @@ app_server <- function(input, output, session) {
 
 
 
-
   observeEvent(input$Navigators, {
       SelectedNavigator<- input$Navigators
       SelectedNavLink<- NEW_navlinks[NEW_navlinks[,1]==SelectedNavigator,2]
@@ -28,7 +27,7 @@ app_server <- function(input, output, session) {
         }
 
       SelectedNavigator_picture_link<- NEW_navlinks[NEW_navlinks[,1]==input$Navigators,3]
-      Image_link<- paste("<center><img src='",SelectedNavigator_picture_link,"' width=20%></center>")
+      Image_link<- paste("<center><img src='",SelectedNavigator_picture_link,"' width=20%></center>", sep = "")
 
       SelectedNavigator_info<-NEW_navlinks[NEW_navlinks[,1]==input$Navigators,4]
       Virtual_info<-NEW_navlinks[NEW_navlinks[,1]==input$Navigators,6]
