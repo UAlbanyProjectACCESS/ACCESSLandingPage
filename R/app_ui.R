@@ -50,7 +50,7 @@ app_ui <- function(request) {
                   f7SmartSelect("Navigators", label=NULL, placeholder = "Choose a Navigator",
                            choices = c(
                              "Choose a Navigator",
-                             #"Evan - (Mon, Wed, Thurs, Fri)",
+                             "Evan - (Mon, Wed, Thurs, Fri)",
                              # "Julia - (Mon, Tues, Thurs)",
                              # "Melissa - (Mon, Tues, Thurs)",
                              "Chioma - (M-F)",
