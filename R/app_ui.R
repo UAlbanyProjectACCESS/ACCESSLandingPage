@@ -52,7 +52,7 @@ app_ui <- function(request) {
                              "Choose a Navigator",
                              "Evan - (Mon, Wed, Thurs, Fri)",
                              # "Julia - (Mon, Tues, Thurs)",
-                             # "Melissa - (Mon, Tues, Thurs)",
+                             "Melissa - (Mon, Tues, Thurs)",
                              "Chioma - (M-F)",
                              "Meg - (Mon,Wed, Thurs)",
                              "Shea - (Tues, Thurs)",
