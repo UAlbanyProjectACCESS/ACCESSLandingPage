@@ -13,8 +13,8 @@ app_ui <- function(request) {
 
     shinyMobile::f7Page(
       title = "Project ACCESS Scheduling Portal",
-      options = list(theme=c("auto"), dark=TRUE, preloader = F,  pullToRefresh=F),
-      allowPWA=TRUE,
+      options = list(theme=c("auto"), dark=TRUE, preloader = T,  pullToRefresh=F),
+      allowPWA=F,
       f7TabLayout(
         # panels are not mandatory. These are similar to sidebars
         navbar = f7Navbar(
@@ -50,9 +50,9 @@ app_ui <- function(request) {
                   f7SmartSelect("Navigators", label=NULL, placeholder = "Choose a Navigator",
                            choices = c(
                              "Choose a Navigator",
-                             "Evan - (Mon, Wed, Thurs, Fri)",
-                             # "Julia - (Mon, Tues, Thurs)",
+                             "Julia - (Mon, Tues, Thurs)",
                              "Melissa - (Mon, Tues, Thurs)",
+                             "Evan - (Mon, Wed, Thurs, Fri)",
                              "Chioma - (M-F)",
                              "Meg - (Mon,Wed, Thurs)",
                              "Shea - (Tues, Thurs)",
