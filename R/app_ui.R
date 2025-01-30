@@ -29,16 +29,20 @@ app_ui <- function(request) {
             icon = f7Icon("house"),
             active = TRUE,
             hidden= T,
-# UNDER CONSTRUCTION MESSAGE
-#             f7Align(h1("The Scheduling System is Currently Under Construction."),side = c("center")),
-#             f7Align(h2("Please check back later."),side = c("center")),
-#             br(),
-#             f7Align(h3("We apologize for the inconvenience!"),side = c("center")),
+
+
+
+            # UNDER CONSTRUCTION MESSAGE
+            #             f7Align(h1("The Scheduling System is Currently Under Construction."),side = c("center")),
+            #             f7Align(h2("Please check back later."),side = c("center")),
+            #             br(),
+            #             f7Align(h3("We apologize for the inconvenience!"),side = c("center")),
 
 
 
             f7Block(
               f7Card(
+                uiOutput("NavApptDescription"),
                 uiOutput("NavDescription"),
                 uiOutput("LinkButton")),
 
@@ -48,34 +52,6 @@ app_ui <- function(request) {
                 f7Card(
                   f7Align(h2("Select a Navigator to view their schedule:"), side = c("left")),
                   uiOutput("Randomized_Nav_List"),
-
-                  # f7SmartSelect("Navigators", label=NULL, placeholder = "Choose a Navigator",
-                  #          choices = c(
-                  #            "Choose a Navigator",
-                  #            "Melissa - (Mon, Thurs)",
-                  #            "Evan - (Mon, Wed, Fri)",
-                  #            "Chioma - (Tues, Thurs, Fri)",
-                  #            "Meg - (Mon, Wed, Thurs)",
-                  #            "Shea - (Tues, Thurs, Fri)",
-                  #            "Clare - (Mon, Tues, Thurs)",
-                  #            "Mikhaela - (Mon, Tues, Wed)"),
-                  #          selected = "Choose a Navigator", openIn = c("sheet"), searchbar = F, virtualList = F),
-
-
-                  # f7Picker("Navigators", label=NULL, placeholder = "Choose a Navigator",
-                  #          choices = c(
-                  #              "Choose a Navigator",
-                  #              "Meg - (Mon,Tues, Thurs)",
-                  #              "Mikhaela - (Mon, Thurs)",
-                  #              "Chioma - (Mon, Wed, Thurs)",
-                  #              "Evan - (Mon, Wed, Fri)",
-                  #              "Clare - (Tues, Wed, Thurs)",
-                  #              "Caroline - (Mon, Tues, Fri)",
-                  #              "Pat  - (Wed, Thurs)",
-                  #              "Shea - (Tues, Fri)"), rotateEffect = T,
-                  #          openIn = "auto", scrollToInput = T, toolbar = F, toolbarCloseText = NULL,
-                  #          closeByOutsideClick = TRUE, sheetSwipeToClose = F),
-
                   br(),
                   footer = NULL,
                   hairlines = F, strong = T, inset = F, tablet = FALSE))

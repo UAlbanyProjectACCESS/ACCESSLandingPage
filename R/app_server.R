@@ -68,6 +68,31 @@ app_server <- function(input, output, session) {
         )
       })
 
+      # Display Description of what to expect in a Nav Appt only if "choose a navigator" is selected...
+      if(input$Navigators == "Choose a Navigator"){
+
+        output$NavApptDescription <- renderUI({
+          tagList(
+            f7Align(
+              h2(tagList(tags$strong("What to expect in a navigation appointment"))),
+              side = c("center")
+            ),
+            f7Align(
+              h4("You will meet with a peer trained to have brief, motivational conversations with you about substance use, mental health, and sexual health. You may discuss your academic success, finances, and other aspects of your well-being. The peer navigator will connect you with relevant resources and supports as needed."),
+              side = c("left")
+            )
+          )
+        })
+
+      } else {
+
+        output$NavApptDescription <- renderUI({})
+
+      }
+
+
+
+
 
   })
 
