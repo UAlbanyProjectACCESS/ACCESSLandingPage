@@ -9,15 +9,15 @@
 app_server <- function(input, output, session) {
 
   Navigator_List<-c("Choose a Navigator",
-    "Melissa - (Mon, Thurs)",
     "Evan - (Mon, Wed, Fri)",
+    "Melissa - (Mon, Thurs)",
     "Meg - (Mon, Wed, Thurs)",
     "Shea - (Tues, Thurs, Fri)",
     "Clare - (Mon, Tues, Thurs)",
     "Mikhaela - (Mon, Tues, Wed)")
 
-  first_item <- Navigator_List[1]
-  Randomized_Navs <- Navigator_List[-1]
+  first_item <- Navigator_List[1:2]
+  Randomized_Navs <- Navigator_List[-2]
 
   shuffled_navs <- sample(Randomized_Navs)
 
