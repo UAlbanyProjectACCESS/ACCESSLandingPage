@@ -17,7 +17,8 @@ app_server <- function(input, output, session) {
     "Mikhaela - (Mon, Tues, Wed)")
 
   first_item <- Navigator_List[1:2]
-  Randomized_Navs <- Navigator_List[-2]
+
+  Randomized_Navs <- Navigator_List[-(1:2)]
 
   shuffled_navs <- sample(Randomized_Navs)
 
