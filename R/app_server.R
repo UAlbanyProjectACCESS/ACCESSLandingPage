@@ -16,14 +16,13 @@ app_server <- function(input, output, session) {
     "Clare - (Mon, Tues, Thurs)",
     "Mikhaela - (Mon, Tues, Wed)")
 
-  first_item <- Navigator_List[1:2]
+  first_item <- Navigator_List[1]
 
-  Randomized_Navs <- Navigator_List[-(1:2)]
+  Randomized_Navs <- Navigator_List[-(1)]
 
   shuffled_navs <- sample(Randomized_Navs)
 
   randomized_list <- c(first_item, shuffled_navs)
-
   print(randomized_list)
 
   output$Randomized_Nav_List<-renderUI({
