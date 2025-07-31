@@ -10,11 +10,8 @@ app_server <- function(input, output, session) {
 
   Navigator_List<-c("Choose a Navigator",
     "Evan - (Mon, Wed, Fri)",
-    "Melissa - (Mon, Thurs)",
     "Meg - (Mon, Wed, Thurs)",
-    "Shea - (Tues, Thurs, Fri)",
-    "Clare - (Mon, Tues, Thurs)",
-    "Mikhaela - (Mon, Tues, Wed)")
+    "Clare - (Mon, Tues, Thurs)")
 
   first_item <- Navigator_List[1]
 
